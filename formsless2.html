@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+</head>
+<body>
+  <form action="#" metod="post" enctype="multipart/form-data"> <!-- enctype="multipart/form-data" атрибут отправки файлов на сервер --> 
+    <fieldset> <!-- атрибут desabled (отключает филсет) -->      
+      <legend>Текстовые поля</legend>
+
+          <p>
+ <label for="textID">Введите текст </label>
+             <input disabled id="textID" type="text" value="text"> <!-- disabled Отключает элемент серенький цвет--> 
+<input readonly type="text" value="text" pattern="[A-Za-z]"> <!-- readonly Отключает элемент, не выделяет цветом (просто отключние поля для редоктирования) разрешает копирование и запрещает вставку--> 
+          </p>
+          <p>
+             <input type="email" required autofocus> <!-- autofocus при загрузке страницы выбирает поле (можно использвать только на одном элементе на странице) --> 
+          </p>
+          <p>
+             <input type="password" placeholder="Это подсказка" minlenght="2" maxlenght="9" >
+         </p>
+          <p>
+             <input type="search">
+         </p>
+          <p>
+             <input type="submit" value="Отправить">
+         </p>
+    </fieldset>
+    <fieldset>
+<legend>
+<p>
+<input type="file" multiple accept="image/*"> <!-- multiple атрибут позволяет выбрать много файлов при загрузке , accept="" доступен только типу файл, определяет какой тип файлов отправлять на сервер , картинка аудио и так далее--> 
+</p>
+</legend>
+    </fieldset>
+<fieldset>  
+
+<legend>Поля для ввода чисел</legend>
+<p>
+ <label for="number">Введите число</label>
+<input type="number" type="number"
+min="2" max="10" step"2"> <!-- step указывает шаг (боковые стрелочки в поле)--> 
+</p>
+
+<p>
+ <label for="range">Ползунок</label>
+<input type="range" type="range"
+min="2" max="30" value="6"> <!-- value указывает значение ползунка--> 
+</p>
+
+
+</fieldset>
+
+<fieldset> 
+<legend>Чекбоксы и радиоконопки</legend>
+<p>
+ 
+<input type="checkbox">
+</p>
+<p>
+<label><input type="checkbox">Чекбоксы</label>
+</p>
+
+<p>
+<label><input type="radio" checked >Радиокнопка</label> <!-- checked при загрузке странички выбирает сразу кружок--> 
+</p>
+
+<fieldset> 
+<label>Группы радиокнопок</label>
+<p>
+<label><input type="radio" name="answer">Да</label>
+<label><input type="radio" name="answer"">Нет</label>
+<label><input type="radio" name="answer">Не заню</label>
+</p>
+
+</fieldset> 
+<fieldset> 
+<legend>Группы чекбоксов (флажков)</legend>
+<label><input type="checkbox" name="answer2[]">Вариант 1</label> <!--  name="answer2[]" множественный выбор (на сервер придет массивом и можно будте получить одним ключем)--> 
+<label><input type="checkbox" name="answer2[]">Вариант 2</label>
+<label><input type="checkbox" name="answer2[]">Вариант 3</label>
+</fieldset> 
+
+
+</fieldset> 
+
+<fieldset> 
+<legend>Выбор даты и времени</legend>
+<p>
+ <label for="time">Выбор времени</label>
+<input id="time" min="14:11">
+</p>
+<p>
+ <label for="date">Выбор даты</label>
+<input type="date" min="2012-12-12">
+</p>
+<p>
+ <label for="datetime">Выбор времени и даты</label>
+<input id="datetime" type="datetime-local">
+</p>
+<p>
+ <label for="month">Выбор месяца</label> <!-- месяц год--> 
+<input id="month" type="month">
+</p>
+<p>
+ <label for="week">Выбор недели</label> <!-- неделя год--> 
+<input id="week" type="week">
+</p>
+</fieldset> 
+<fieldset> 
+<legend>Взятие цвета/ Скрытое поле</legend>
+<p>
+<input type="color">
+</p>
+<p>
+<label for="hidden">Скрытое поле</label> <!-- скрытое поля (для сервера иногда нужно)--> 
+<input type="hidden" id="hidden" value="info">
+</p>
+</fieldset> 
+<fieldset> 
+<legend>Кнопки (тег input)</legend>
+<input type="submit" value="Отправить данные формы"> <!-- submit кнопка которая отправляет все данные на сервер, value назнание на кнопке -->
+<p>
+<input type="reset" value="Стереть данные формы"> <!-- reset кнопка которая очиает данные формы--> 
+</p>
+<p>
+<input type="button" value="Это просто кнопка">  <!-- button это просто кнопка (по JS можно будет оследить нажатие кнопки и привязать к ней события)--> 
+</p>
+
+<p>
+<input type="image" src="parh_to_img" alt="не грузит картинку"> <!-- type="image" что бы кнопку сделать картинкой--> 
+</p>
+<!-- image и submit отправляют данные на сервер--> 
+</fieldset> 
+
+<fieldset> 
+<legend>Кнопки (тег button)</legend>
+<button value="some_value" name="submit_btn" type="submit">Отправить данные</button> <!-- name="submit_btn" по имени кнопки можно получить данные из value="some_value" --> 
+<button type="reset">Очистка полей</button>
+<button type="button">Просто кнопка</button>
+</fieldset> 
+
+<fieldset>
+<legend>Многострочное текстовое поле</legend>
+<textarea cols="20" rows="30" autofocus required placeholder="Подсказка" wrap="off"></textarea> <!-- cols колонки, rows ряды (растягивание отключется только css стилями, wrap="" как данные будут отправлятся на сервер --> 
+</fieldset>  
+
+<fieldset> 
+<legend>Раскрывающиеся списки</legend>
+</fieldset> 
+<p>
+<select name="select" size="2"> <!-- список/ multiple - выбор ескольких элементов из списка, по умолчанию только один элемент. disabled отключает элементы--> 
+<option label="Элем1" value="1">Элемент списка 1</option>  <!--Элемент списка--> 
+<option selected value="2">Элемент списка 2</option> <!-- selected выбор элемента по умолчанию--> 
+<option value="3">Элемент списка 3</option>
+</select>
+</p>
+
+<p>
+<select>
+<optgroup label="Заголовок группы элементов 1">
+<option>Элемент1</option>
+<option>Элемент2</option>
+<option>Элемент3</option>
+</optgroup>
+
+<optgroup label="Заголовок группы элементов 2"">
+<option>Элемент1</option>
+<option>Элемент2</option>
+<option>Элемент3</option>
+</optgroup>
+</select>
+</p>
+  </form>
+</body>
+</html>

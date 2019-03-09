@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+</head>
+<body>
+  <form action="#" metod="post" enctype="multipart/form-data"> <!-- enctype="multipart/form-data" атрибут отправки файлов на сервер --> 
+    <fieldset> <!-- атрибут desabled (отключает филсет) -->      
+      <legend>Текстовые поля</legend>
+
+          <p>
+ <label for="textID">Введите текст </label>
+             <input id="textID" type="text" value="text">
+          </p>
+          <p>
+             <input type="email">
+          </p>
+          <p>
+             <input type="password" placeholder="Это подсказка" minlenght="2" maxlenght="9" >
+         </p>
+          <p>
+             <input type="search">
+         </p>
+          <p>
+             <input type="submit" value="Отправить">
+         </p>
+    </fieldset>
+    <fieldset>
+<legend>
+<p>
+<input type="file" multiple accept="image/*"> <!-- multiple атрибут позволяет выбрать много файлов при загрузке , accept="" доступен только типу файл, определяет какой тип файлов отправлять на сервер , картинка аудио и так далее--> 
+</p>
+</legend>
+    </fieldset>
+  </form>
+</body>
+</html>
