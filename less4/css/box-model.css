@@ -1,0 +1,62 @@
+p{
+	color: red;
+}
+/*задаем margin */
+.div{
+/*
+margin-top: 30px;  отступ сверху
+margin-right: 15px; отступ справа
+margin-bottom: 40px; отступ снизу
+margin-left: 20px; отступ слева
+*/
+margin: 15px;/*со всех сторони 15рх*/
+margin: 15px 30px;/*сверху и снизу по 30, справа и лево 15*/
+margin: 15px 30px 10px;/*сверху 15, справа и лево 30, снизу 10*/
+margin: 30px 15px 40px 20px;/*сверху 30, снизу 40, слева 20, справа 15*/
+
+}
+.div{
+	/*
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+
+	padding: 10px;
+*/
+	padding: 15px;/*со всех сторони 15рх*/
+    padding: 15px 30px;/*сверху и снизу по 30, справа и лево 15*/
+    padding: 15px 30px 10px;/*сверху 15, справа и лево 30, снизу 10*/
+    padding: 30px 15px 40px 20px;/*сверху 30, снизу 40, слева 20, справа 15*/
+}
+.div{
+	border: 1px solid brown; /*размер рамки 1px, solid тип рамки, цвет*/
+	border-radius: 20px;/*скругляет угол*/ 
+
+	border-top: 1px solid brown;
+	border-right:1px solid brown;
+	border-bottom:1px solid brown;
+	border-left: 1px solid brown;
+	border-top-left-radius: 20px; /*скругляет верхний левый угол*/
+	border-top-right-radius: 20px;/*верхний правый*/
+	border-bottom-right-radius: 20px;/*нижний правый*/
+	border-bottom-left-radius: 20px;/*нижний левый*/
+/*
+}
+.div{
+	margin: 20px;
+
+}
+.elem{
+	margin: 20px;
+}
+
+Можно перечислить все подрят и задать всем один margin.
+.div, 
+.elem,
+ul,
+#elemID,
+ul li{
+	margin: 20px;
+}
+*/

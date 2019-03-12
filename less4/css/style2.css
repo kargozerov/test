@@ -1,0 +1,35 @@
+.p{
+	height: 100px;
+	width: 200px;
+	border:1px solid brown;
+	display: inline;/*Сделать блочный элемент строчным*/
+}
+.span{
+	height: 100px;
+	width: 200px;
+	border:1px solid brown;
+	display: block;/*Сделать строчный элемент блочным*/
+	
+}
+nav li{
+	display: inline; /*Повернуть элементы списка в строку(li блочный делаем его строчным), inline-block - блочно строчный можно добавить размеры как в строчном*/
+	list-style-type: none;
+	padding: 20px 30px;
+	height: 40px;
+	width: 50px;
+	background: yellow
+
+}
+/*
+body{
+	background-image: url("");
+	background-repeat: ;
+}
+*/
+/* Дома потренить свойства
+background-repeat: ;
+background-position: ;
+background-position: ;
+background-attachment: ;
+background-size: ;
+*/
