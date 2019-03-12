@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Подключение стилей</title>
+	<style>
+		h2 {
+			color: blue;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1 style="color: red">Встраивание - через атрибут style</h1>
+	<h2>Вложения - поключение стилей через тег style в теге head</h2>
+	<h3>Связыванеи - подключение файла со стилями через тег link в теге head</h3>
+		<p class="conter">Текст</p>
+		<div id="container">
+			
+		</div>
+	<p>
+		<em>Дочерний селектор</em>
+	</p>
+	<p><span><em>p > span > em</em></span></p>
+	<!--
+	p. red a{}
+	<p><span class="Red"><a href="#">p. red a{}</a></span></p>
+	p.red a{} 
+	<p class="red"><a href="">p.red a</a></p>
+	.red a{}
+	<div class="red"><a href="">.red a</a></div>
+     -->
+     <nav> <!-- тег контейнер для меню -->
+     	<ul>
+     		<li>Главная</li>
+     		<li>Каталог</li>
+     		<li>Контакты</li>
+     	</ul>
+     </nav>
+   <p class="elem-class" id="elemId">Специфичность</p>	
+</body>
+</html>

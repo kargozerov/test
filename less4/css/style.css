@@ -1,0 +1,47 @@
+h3{
+	color: green !important; /*окраска шрифта, !important - приоритет*/
+}
+h3{
+	color: red ; /*Подключится последний селектор цвет, !important*/
+}
+.conter{
+	text-align: center; /*выравнивание текста*/
+}
+#container{
+	height: 100px;
+	width: 100px;
+	background: yellow;
+}
+/*дочерний селектор*/
+p > em { /*em вложен в р (p > span > em так не буте работать)*/
+	font-size: 30pt; /*размер шрифта*/
+}
+/*селектор птомков*/
+p em{ /*стили применяются ко всем элементам em вложеных в p*/
+	color: orange;
+}
+
+p .red a{
+	text-decoration: none; /*отключает подчеркивание ссылким*/
+
+}
+p.red a{ /*селектор тега-класса-тега, стили будут применятся ко всем ссылкам, которые лежат в теге p  с классо .red*/
+	
+}
+nav li { /*применяем стиль к элементу li*/
+	list-style-type: none; /*убирает маркеры из li*/ /*свойство interit принудительное наследование свойств родителя*/ 
+}
+body{
+	background: #000;
+}
+
+/* Специфичность id 0100, class 0010, tag 0001, встроенный стиль в html 1000*/
+#elemId{
+	background: yellow;
+}
+.elem-class{
+	background: green;
+}
+p{
+	background: red;
+}
