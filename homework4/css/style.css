@@ -1,0 +1,43 @@
+p{
+  color: #071f83;
+}
+#Menu{
+  text-align: center;
+
+}
+
+#Menu li {
+  display: inline;
+  color: rgb(70, 195, 20);
+  background: yellow;
+  list-style-type: none; /*убрать маркеры из li*/
+	padding: 20px 30px;
+	height: 40px;
+	width: 50px;
+	background: #4482b5;
+  border: 1px solid #4d5099;
+  border-radius: 5px;
+
+}
+ul{
+  display: block;
+}
+}
+li a{
+  font-size: 25px;
+}
+a{
+  padding: 20px;
+  display: inline-block;
+}
+
+body{
+background-image: url(../img/fon.jpg);
+background-size:  cover; /*cover
+Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
+background-repeat: no-repeat;/*no-repeat
+Устанавливает одно фоновое изображение в элементе без его повторений, положение которого определяется свойством background-position (по умолчанию в левом верхнем углу)*/
+background-attachment: fixed; /*fixed
+Делает фоновое изображение элемента неподвижным.*/
+background-position: center center; /*center center -картинка по середине со всех сторон*/
+}

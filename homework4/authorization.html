@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML">
+  <link rel="icon" href="img/authorization.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Авторизация</title>
+</head>
+
+<body>
+  <div class="Menu" id="Menu">
+    <h1>Меню</h1>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="index3.html">Введение в Git</a></li>
+      <li><a href="index2.html">Картинки</a></li>
+      <li type="square"><a href="authorization.html">Вход</a></li>
+      <li type="square"><a href="registration.html">Регистрация</a></li>
+      <li type="square"><a href="FormAnket.html">Анкета на визу</a></li>
+      <!--square квадратный маркер -->
+    </ul>
+  </div>
+  <form action="#" method="post"
+          enctype="multipart/form-data">
+    <fieldset>
+      <legend>Страница авторизации</legend>
+      <p>
+        <label for="idEmailAvtoriz">Введите Email</label>
+        <input type="email" id="idEmailAvtoriz" autofocus placeholder="email@gmail.com" required>
+        <!--required Обязательное для заполнения поле -->
+      </p>
+      <p>
+        <label for="idPassAvtoriz">Введите пароль</label>
+        <input type="password" id="idPassAvtoriz" required>
+    </p>
+<p>
+  <input type="submit" value="Отправить">
+</p>
+</fieldset>
+</form>
+<div>
+  <a href="authorization.html#Menu">Наверх</a>
+</div>
+
+</body>
+
+</html>

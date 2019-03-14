@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML">
+  <link rel="icon" href="img/authorization.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Регистрация</title>
+</head>
+
+<body>
+  <div class="Menu" id="Menu">
+		<h1>Меню</h1>
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="index3.html">Введение в Git</a></li>
+			<li><a href="index2.html">Картинки</a></li>
+			<li type="square"><a href="authorization.html">Вход</a></li>
+			<li type="square"><a href="registration.html">Регистрация</a></li>
+			<li type="square"><a href="FormAnket.html">Анкета на визу</a></li>
+			<!--square квадратный маркер -->
+		</ul>
+	</div>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Страница регистрации</legend>
+      <p>
+        <label for="idLogin">Имя пользователя</label>
+        <input type="text" id="idLogin" autofocus placeholder="Вася" minlength="5" maxlength="10" required>
+        <!--required Обязательное для заполнения поле  -->
+      </p>
+      <p>
+        <label for="idEmailReg">Эл. почта</label>
+        <input type="email" id="idEmailReg" placeholder="email@gmail.com" required>
+      </p>
+      <p><label for="idPassReg">Пароль</label>
+        <input type="password" id="idPassReg" minlength="4" maxlength="12" required>
+      </p>
+      <p><label for="idPassRegRep">Повторите пароль</label>
+        <input type="password" id="idPassRegRep" minlength="4" maxlength="12" required>
+      </p>
+      <p>
+        <label for="idFileImg">Загрузите фото</label>
+        <input type="file" id="idFileImg" accept="image/*">
+      </p>
+      <p>
+        <input type="submit" value="Отправить">
+      </p>
+    </fieldset>
+  </form>
+  <div>
+    <a href="registration.html#Menu">Наверх</a>
+  </div>
+</body>
+
+</html>

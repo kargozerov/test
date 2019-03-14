@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="img/visa.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Анкета на визу</title>
+</head>
+
+<body>
+  <div class="Menu" id="Menu">
+		<h1>Меню</h1>
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="index3.html">Введение в Git</a></li>
+			<li><a href="index2.html">Картинки</a></li>
+			<li type="square"><a href="authorization.html">Вход</a></li>
+			<li type="square"><a href="registration.html">Регистрация</a></li>
+			<li type="square"><a href="FormAnket.html">Анкета на визу</a></li>
+			<!--square квадратный маркер -->
+		</ul>
+	</div>
+  <h1>Информация для анкеты в Посольство Англии</h1>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <fieldset <legend>Анкета на визу</legend>
+      <p>
+        <fieldset>
+          <legend>За визой какого типа Вы обращаетесь?</legend>
+
+
+          <p>
+            <label><input name="Form1" type="radio">Гостевая</label>
+          </p>
+          <p>
+            <label><input name="Form1" type="radio">Туристическая</label>
+          </p>
+          <p>
+            <label><input name="Form1" type="radio">Студенческая </label>
+          </p>
+          <p>
+            <label><input name="Form1" type="radio">Бизнес </label>
+          </p>
+          <p>
+            <label><input name="Form1" type="radio">Транзитная виза</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Часть 1 (личные данные)</legend>
+          <p>
+            <label for="Form2">1.1. Имя и отчество</label>
+            <input type="text" id="Form2" placeholder="Владимир Владимирович" minlength="5" maxlength="30" required>
+          </p>
+          <p>
+            <label for="Form3">1.2. Фамилия</label>
+            <input type="text" id="Form3" placeholder="Путин" minlength="5" maxlength="30" required>
+          </p>
+          <p>
+            <label for="Form4">1.3. Другие когда-либо использовавшиеся имена и фамилии</label>
+            <input type="text" id="Form4" placeholder="девичья фамилия" minlength="5" maxlength="30" required>
+          </p>
+          <p>
+            <label for="Form5">1.4. Пол</label>
+            <p>
+              <label><input name="Form5" type="radio">Муж.</label>
+            </p>
+            <p>
+              <label><input name="Form5" type="radio">Жен.</label>
+            </p>
+            <p>
+              <p>
+                <label for="Form6">1.5. Дата рождения </label>
+                <input id="Form6" min="1900-01-01" type="date">
+              </p>
+              <p>
+                <label for="Form7">1.6. Место рождения </label>
+                <input type="text" id="Form7" placeholder="город и страна" minlength="5" maxlength="30" required>
+              </p>
+              <p>
+                <label for="Form8">1.7. Страна рождения </label>
+                <input type="text" id="Form8" placeholder="как в загранпаспорте" minlength="5" maxlength="30" required>
+              </p>
+              <p>
+                <label for="Form9">1.9. Меняли ли Вы когда-нибудь гражданство?</label>
+                <p>
+                  <label><input name="Form9" type="radio">Да</label>
+                </p>
+                <p>
+                  <label><input name="Form9" type="radio">Нет</label>
+                </p>
+                <p>
+                  <label for="Form10">1.10. Если Вы ответили на предыдущий вопрос «ДА», уточните данные </label>
+                  <input type="text" id="Form10" placeholder="гражданством какой страны " minlength="5" maxlength="40" required>
+                </p>
+                <p>
+                  <label for="Form11">1.11. Семейное положение?</label>
+                  <p>
+                    <label><input name="Form11" type="radio">Не замужем / не женат</label>
+                  </p>
+                  <p>
+                    <label><input name="Form11" type="radio">Замужем /женат</label>
+                    <p>
+                      <label><input name="Form11" type="radio">Гражданский брак</label>
+                    </p>
+                    <p>
+                      <label><input name="Form11" type="radio">Внебрачный партнер</label>
+                    </p>
+                    <p>
+                      <label><input name="Form11" type="radio">В разводе</label>
+                    </p>
+                    <p>
+                      <label><input name="Form11" type="radio">Расторгнутый гражданский брак</label>
+                    </p>
+                    <p>
+                      <label><input name="Form11" type="radio">Вдова / вдовец</label>
+                    </p>
+                    <p>
+                      <label><input name="Form11" type="radio">Раздельное проживание</label>
+                    </p>
+
+        </fieldset>
+        <fieldset>
+          <legend>Часть 2 (паспортные данные)</legend>
+          <p>
+            <label for="Form12">2.1. Номер загранпаспорта</label>
+            <input type="number" id="Form12" placeholder="1111 33333" minlength="9" maxlength="9" required>
+          </p>
+          <p>
+            <label for="Form13">2.2. В каком городе и стране выдан паспорт</label>
+            <input type="text" id="Form13" placeholder="Санкт-Петербур Россия" minlength="10" maxlength="50" required>
+          </p>
+          <p>
+            <label for="Form14">2.3. Кем выдан </label>
+            <input type="text" id="Form14" placeholder="УВД №, УФМС №, МИД и т.д.)" minlength="10" maxlength="50" required>
+          </p>
+          <p>
+            <label for="Form15">2.4. Дата выдачи паспорта </label>
+            <input type="date" id="Form15" min="1900-01-01" max="2019-03-03" required>
+          </p>
+          <p>
+            <label for="Form16">2.5. Дата окончания срока действия паспорта</label>
+            <input type="date" id="Form16" min="1900-01-01" max="2019-03-03" required>
+          </p>
+          <p>
+            <label for="Form17">2.6. Это Ваш первый загранпаспорт?</label>
+            <select name="selectPasport" id="Form17" required>
+              <option value="Form17Yes">Да</option>
+              <option value="Form17No">Нет</option>
+            </select>
+          </p>
+          <p>
+            <label for="Form18">2.7. Если Вы ответили на предыдущий вопрос «НЕТ», сообщите подробности из предыдущих паспортов за последние 10 лет, включая информацию о том, где они сейчас находятся.</label>
+            <p>
+              <label for="Form18Num">Номер:</label>
+              <input type="number" id="Form18Num" placeholder="12345" minlength="10" maxlength="50" required>
+            </p>
+            <p>
+              <label for="Form18Date">Дата выдачи: </label>
+              <input type="date" id="Form18Date" min="1900-01-01" max="2019-03-03" required>
+            </p>
+            <p>
+              <label for="Form18DateVal">Паспорт действителен до: </label>
+              <input type="date" id="Form18DateVal" min="1900-01-01" max="2030-12-12" required>
+            </p>
+            <p>
+              <label for="Form18Is">Кем выдан: </label>
+              <input type="text" id="Form18Is" placeholder="УВД №, УФМС №, МИД и т.д" minlength="10" maxlength="50" required>
+            </p>
+            <p>
+              <label for="Form18Where">Где сейчас этот паспорт:</label>
+              <select name="selectPasportWhere" required>
+                <option value="Form18WhereLoss">потерян</option>
+                <option value="Form18WhereSteal">украден</option>
+                <option value="Form18WhereFinish">закончился срок действия</option>
+                <option value="Form18WhereWuthMe">со мной</option>
+              </select>
+            </p>
+
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Часть 3 (контактная информация)</legend>
+          <p>
+            <label for="Form19">3.1. Укажите Ваш полный адрес (страна, город/деревня и.т.д.) и индекс </label>
+            <p>
+              <textarea id="Form19" name="Textarea" cols="60" rows="6" minlength="30" maxlength="80" required>
+                </textarea>
+            </p>
+          </p>
+          <p>
+            <label for="Form20">3.2. Как долго Вы проживаете по этому адресу?</label>
+            <p>
+              <label for="Form20Year">Лет</label>
+              <input type="number" id="Form20Year" placeholder="5" minlength="1" maxlength="100" required>
+            </p>
+            <p>
+              <label for="Form20Month">Месяцев</label>
+              <input type="number" id="Form20Month" placeholder="10" minlength="1" maxlength="5000" required>
+            </p>
+            <p>
+              <label for="Form21">3.3. Номер домашнего телефона </label>
+              <input type="tel" id="Form21" placeholder="8 812 999 999" minlength="9" maxlength="9" required>
+            </p>
+            <p>
+              <label for="Form22">3.4. Номер мобильного телефона</label>
+              <input type="tel" id="Form22" placeholder="+7 999 999 99 99" minlength="9" maxlength="9" required>
+            </p>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Часть 4 (семейное положение)
+          </legend>
+          <p>
+            <label for="Form23">4.1. Полное имя супруга/партнера </label>
+            <input type="text" id="Form23" placeholder="Иванова Мария Ивановна" minlength="10" maxlength="60" required>
+          </p>
+          <p>
+            <label for="Form24">4.2. Адрес проживания супруга/супруги (страна, город/деревня и.т.д.) и индекс </label>
+            <input type="text" id="Form24" placeholder="Москва, улица строителей" minlength="10" maxlength="60" required>
+          </p>
+          <p>
+            <label for="Form25">4.3. Дата рождения супруга/партнера  </label>
+              <input type="date" id="Form25" min="1900-01-01" max="2019-03-03" required>
+          </p>
+          <p>
+            <label for="Form26">4.4. Гражданство супруга/партнера</label>
+            <input type="text" id="Form26" placeholder="СССР" minlength="10" maxlength="60" required>
+          </p>
+          <p>
+            <label for="Form27">4.5. Поедет ли Ваш супруг/партнер с Вами?</label>
+            <select name="selectForm27" id="Form27" required>
+              <option  value="Form27Yes">Да</option>
+              <option  value="Form27No">Нет</option>
+            </select>
+          </p>
+          <p>
+            <label for="Form28">4.6. У Вас есть дети?</label>
+            <select name="selectForm28" id="Form28" required>
+              <option value="Form28Yes">Да</option>
+              <option value="Form28No">Нет</option>
+            </select>
+          </p>
+          <p>
+            <label for="Form29">4.7. Сколько у Вас детей?</label>
+            <select name="selectForm29" id="Form29" required>
+              <option  value="Form29_1Ch">1</option>
+              <option  value="Form29_2Ch">2</option>
+              <option  value="Form29_3Ch">3</option>
+            </select>
+          </p>
+          <p>
+            <label for="Form30">4.8. Пожалуйста, предоставьте полную информацию о Ваших детях.</label>
+            <p>
+              <label for="Form30NameCh">Ф.И.О. ребенка</label>
+              <input type="text" id="Form30NameCh" placeholder="Иванов Иван Иванович" minlength="10" maxlength="70" required>
+            </p>
+            <p>
+              <label for="Form30Date">Дата Родения</label>
+              <input type="date" id="Form30Date" min="1900-01-01" max="2019-04-04" required>
+            </p>
+            <p>
+              <label for="Form30Place">Место рождения</label>
+              <input type="text" id="Form30Place" placeholder="Москва" minlength="10" maxlength="70" required>
+            </p>
+            <p>
+              <label for="Form31">4.9. Будут ли ваши дети путешествовать с Вами?</label>
+              <select name="selectForm31" id="Form31" required>
+                <option  value="Form31Yes">Да</option>
+                <option  value="Form31No">Нет</option>
+              </select>
+            </p>
+            </p>
+
+        </fieldset>
+        <fieldset>
+          <legend>Часть 5 (пребывание в Великобритании)</legend>
+          <p>
+            <label for="Form32">5.1. Как долго Вы намереваетесь остаться в Великобритании?</label>
+            <input type="number" id="Form32" placeholder="100" minlength="1" maxlength="365" required>
+          </p>
+          <p>
+            <label for="Form33">5.2. Укажите точные даты своего визита в Великобританию? </label>
+            <p>
+              <label for="Form33Date1">С</label>
+              <input type="date" id="Form33Date1" min="2019-03-03" max="2020-03-03" required>
+            </p>
+            <p>
+              <label for="Form33Date2">ПО</label>
+              <input type="date" id="Form33Date2" min="2019-03-03" max="2020-03-03" required>
+            </p>
+            <p>
+              <label for="Form34">5.3. Вы гражданин той страны где вы подаете на визу? (т.е. России)</label>
+              <select name="selectForm34" id="Form34" required>
+                <option value="Form34Yes">Да</option>
+                <option value="Form34No">Нет</option>
+              </select>
+            </p>
+            <p>
+              <label for="Form35">5.4. Вы будете путешествовать с кем то?</label>
+              <select name="selectForm35" id="Form35" required>
+                <option value="Form35Yes">Да</option>
+                <option value="Form35No">Нет</option>
+              </select>
+            </p>
+            <p>
+              <label for="Form36">5.5. Сколько человек будет путешествовать с Вами?</label>
+              <select name="selectForm36" id="Form36" required>
+                <option  value="Form36HowMuch1">1</option>
+                <option  value="Form36HowMuch2">2</option>
+                <option  value="Form36HowMuch3">3</option>
+              </select>
+            </p>
+            <p>
+              <label for="Form37">5.6.Что Вы будете делать в Великобритании?</label>
+              <input type="text" id="Form37" placeholder="Туризм" minlength="1" maxlength="70" required>
+            </p>
+            <p>
+              <label for="Form38">5.7.У кого Вы останитесь в Великобритании?</label>
+              <p>
+                  <label><input id="Form38" name="answer1[]" type="checkbox">⁯ В отеле</label>
+                  <label><input id="Form38" name="answer2[]" type="checkbox">У близких родственников</label>
+                  <label><input id="Form38" name="answer3[]" type="checkbox">⁯ У дальних родственников</label>
+                  <label><input id="Form38" name="answer3[]" type="checkbox">⁯ У друзей</label>
+                  <label><input id="Form38" name="answer3[]" type="checkbox">Другое</label>
+              </p>
+            </p>
+
+
+
+        </fieldset>
+        <p>
+            <input type="reset"
+                   value="Очистить поля формы">
+        </p>
+        <p>
+            <input type="submit"
+                   value="Отправить данные в посольство">
+        </p>
+
+    </fieldset>
+    </form>
+    <!--livereload  -->
+    <!--livereload  -->
+    <!--livereload  -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+    <!--livereload  -->
+    <!--livereload  -->
+    <!--livereload  -->
+
+    <div>
+      <a href="FormAnket.html#Menu">Наверх</a>
+    </div>
+
+</body>
+
+</html>
