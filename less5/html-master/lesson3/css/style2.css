@@ -1,0 +1,96 @@
+/* задаем margin */
+.div {
+   /* margin-top: 30px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    margin-left: 20px;*/
+
+    /*со всех сторон*/
+    margin: 15px;
+    /*top-bottom right-left*/
+    margin: 15px 30px;
+    /*top right-left bottom*/
+    margin: 15px 30px 10px;
+    /*top right bottom left*/
+    margin: 30px 15px 40px 20px;
+}
+
+/* padding */
+.div {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    padding: 10px;
+    /*top-bottom right-left*/
+    padding: 15px 30px;
+    /*top right-left bottom*/
+    padding: 15px 30px 10px;
+    /*top right bottom left*/
+    padding: 30px 15px 40px 20px;
+}
+
+/* рамка */
+.div {
+    border: 1px solid brown;
+    border-radius: 20px;
+
+    border-top: 1px solid brown;
+    border-right: 1px solid brown;
+    border-bottom: 1px solid brown;
+    border-left: 1px solid brown;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.div,
+.elem,
+ul,
+#elemId,
+nav li{
+    margin: 20px;
+}
+
+.elem {
+    color: red;
+}
+
+
+.p {
+    height: 100px;
+    width: 200px;
+    border: 1px solid #333;
+
+    /*сделать блочный элемент строчным*/
+    display: inline;
+}
+
+.span {
+    height: 100px;
+    width: 200px;
+    border: 1px solid #333;
+
+    /*сделать строчный элемент блочным*/
+    display: block;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    background: yellow;
+}
+
+
+/*body {
+    background-image: ;
+    background-repeat: ;
+    background-position: ;
+    background-attachment: ;
+    background-size: ;
+}*/
+
+

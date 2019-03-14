@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Подключение стилей</title>
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1 style="color: red">
+    Встраивание - через атрибут style
+</h1>
+<h2>
+    Вложение - подключение стилей
+    через тег style в теге head
+</h2>
+<h3>
+    Связывание - подключение файлов со стилями
+    через тег link в теге head
+</h3>
+
+<p class="center">Текст</p>
+
+<div id="container"></div>
+
+<p>
+    <em>
+        Дочерний селектор
+    </em>
+</p>
+
+<p>
+    <span>
+        <em>p > span > em</em>
+    </span>
+</p>
+
+
+<p>
+    <span class="red">
+        <a>p .red a {}</a>
+    </span>
+</p>
+
+<p class="red">
+    <a>p.red a</a>
+</p>
+
+<div class="red">
+    <a>.red a</a>
+</div>
+
+<!--тег nav используется для отображения меню-->
+<nav>
+    <ul>
+        <li>Главная</li>
+        <li>Каталог</li>
+        <li>Контакты</li>
+    </ul>
+</nav>
+
+<p class="elem-class" id="elemId">
+    Специфичность
+</p>
+
+
+
+<!--<asdr>свой_тег</asdr>-->
+</body>
+</html>

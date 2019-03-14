@@ -1,0 +1,77 @@
+/*подключение других файлов со стилями*/
+@import url("style2.css");
+/* текст комментария */
+
+/*css селекторы*/
+
+/*css селектор {
+    свойство: значение;
+    свойство2: значение;
+    свойство3: значение;
+}*/
+
+/* селекторы тегов (имя тега) */
+h3 {
+    color: green !important; /*проритет*/
+}
+h3 {
+    color: red;
+}
+
+/* селектор класса */
+.center {
+    text-align: center;
+}
+
+/*селектор идентификатора элемента*/
+#container {
+    height: 100px;
+    width: 100px;
+    background: yellow;
+}
+
+/*дочерний селектор*/
+p > em {
+    font-size: 30pt;
+}
+
+/*селектор потомков*/
+p em {
+    color: orange;
+}
+
+p .red a {
+    text-decoration: none;
+}
+
+p.red a {}
+/*<p class="red"><a>Ссылка</a></p>*/
+.red a {}
+
+nav li {
+    list-style-type: none;
+}
+
+/*inherit - наследование свойств родителя*/
+
+
+
+/*body{*/
+    /*background: black;*/
+/*}*/
+#elemId {
+    background: yellow;
+}
+
+.elem-class {
+    background: green;
+}
+
+p {
+    background: red;
+}
+
+/*id    0 1 0 0
+class 0 0 1 0
+tag   0 0 0 1
+встроенный стиль 1 0 0 0*/

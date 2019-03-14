@@ -1,0 +1,32 @@
+@import url("grid.css");
+
+.container{ /*всегда выглядят одинаково*/
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.active{
+
+}
+ul.slider{ /*можно просто .slider*/
+	padding: 0;
+	margin: 0 0 30px; /*снизу отступ 30px*/
+	list-style-type: none;
+} 
+.slider li{
+	display: none;
+}
+
+.slider li.active{
+	display: block;
+}
+.card{
+	border: 1px solid black;
+	height: 200px;
+	margin: 5px;/*отступ по бокам сетки*/
+}
+.cards{
+	margin-bottom: 30px;/*отступ снизу сетки*/
+}
+div{
+	box-sizing: border-box; /*что бы пофиксить марджины, чтобы не разъежалась сетка*/
+}
