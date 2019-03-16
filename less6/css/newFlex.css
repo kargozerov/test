@@ -1,0 +1,26 @@
+.border{
+	border: 1px solid black;
+}
+/*Родительский элемент*/
+.flex-row{
+	display: flex; /*сделали флекс контейнером*/
+}
+
+/*Дочерний элемент*/
+.flex-1{
+ flex: 1; /*одна часть*/
+}
+.flex-2{
+ flex: 2;/*две части*/
+}
+
+.flex-column{
+	display: flex;  /*сделали флекс контейнером*/
+	flex-direction: column; /*преврашает в горизонтальные колонки*/
+}
+
+.justify-content{
+	justify-content: space-between;
+	height: 300px ;
+
+}

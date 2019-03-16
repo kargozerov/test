@@ -1,0 +1,57 @@
+p{
+	color: red;
+}
+.hover{
+	height: 200px;
+	width: 300px;
+	background: green;
+}
+
+.hover:hover {  /*:hover псевдоселектор */
+	background:  yellow;
+	height: 200px;
+	width: 300px;
+}
+.hover:active{
+	background:  red;
+	height: 200px;
+	width: 300px;
+}
+a:hover{ /*hover наведение мышкой (курсором) на элемент*/
+	color: red;
+}
+a:visited{ /*посещенная ссылка*/
+	color: orange;
+}
+a:link{ /*не посещенная ссылка*/
+	color: black;
+	background: yellow;
+}
+a:active{ /*нажатие на элемент*/
+	color: green;
+}
+.hover:target{ /*при переходне на элемент с помошью ссылки hover*/
+	display: none;
+}
+
+.form{ /*скрыли форму аторизации*/
+	display: none;
+}
+.form:target{
+	display: block; /*при переходе по ссылке к form открыли форму аторизации*/
+	position: absolute;
+	top: 200px;
+	left:200px;
+	right: 200px;
+	bottom: 200px;
+	background: yellow;
+}
+/*Селекторы атрибутов*/
+ /* селектор[атрибут="значение"] {} применятся стили ко всем элементам атрибутов , например таким как placeholder*/
+input[type="text"] {
+	color: red;
+}
+input[type="email"]{
+	background: orange;
+	color: blue;
+}

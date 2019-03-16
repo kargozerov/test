@@ -1,0 +1,66 @@
+
+p{
+	background: #00FA9A;
+}
+
+div{
+	background: #20B2AA;
+	margin: 20px;
+}
+/*Выравнивание по горизонтали*/
+.flex{
+	display: flex; /*сделали элемент флекс дочерним флекс контейнером*/ /*меню*/
+	/* flex-start выстраивание в начале родительского контейнера*/
+	justify-content: flex-start;/*горизонтальное выравнивание*/
+	/* flex-end выстраивание в нконце родительского контейнера*/
+	justify-content: flex-end;
+	/* flex-center выстраивание по центру родительского контейнера*/ /*меню*/
+	justify-content: center;
+	/* space-around пространство делится на равные части (высчитывается автоматом)*/ /*меню*/
+	justify-content: space-around;
+	/* space-between первый элемент прилипает к началу контейнера, последний к концу контейнера остальные на равные части(высчитывается автоматом)*/ /*меню*/
+	justify-content: space-between;
+}
+/*Выравнивание по вертикали*/
+.flex1{
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch; /*по умолчанию*/
+	align-items: flex-start; /*элементы выстраиваюся по верху самого высокого*/
+	align-items: flex-end;/*элементы выстраиваюся по низу самого высокого*/
+	align-items: baseline; /*по базовой линии (редко используется)*/
+}
+/*Направление оси*/
+.flex2{
+	display: flex;
+	flex-direction: row; /*по умолчанию*/
+	flex-direction: row-reverse;/*прилипает к концу контейнера и делает ревер элементов*/
+	flex-direction: column;/*преврашает в горизонтальные колонки*/
+	flex-direction: column-reverse;/*преврашает в горизонтальные колонки и делает реверс*/
+}
+/*многострочность*/
+.flex3{
+	display: flex;
+	width: 250px;
+	flex-wrap: nowrap;/*по умолчанию*/
+	flex-wrap: wrap; /*перенос на следующую строку, когда не вмешаются в родительский контейнер*/
+	flex-wrap: wrap-reverse;/*перенос на следующую строку, когда не вмешаются в родительский контейнер и делает реверс*/
+}
+/*многострочное выравнивание*/
+.flex4{
+	display: flex;
+	width: 250px;
+     /*многострочное выравнивание*/
+     align-content: stretch;/*по умолчанию*/
+     align-content: flex-start; /*Элементы распологаюся сверху*/
+     align-content: flex-end; /*Элементы распологаюся снизу*/
+     align-content: center; /*по центру*/
+     align-content: space-around; /*элементы размешаюся на одинаковом расстоянии*/
+     align-content: space-between; /*элементы размешаюся на одинаковом расстоянии и по середине*/
+
+
+	/*Обязательные свойства контейнера*/
+	flex-direction: row; /*направоление оси*/
+	flex-wrap: wrap; /*разрешон перенос строк когда не помещаются*/
+	height: 500px;
+}
