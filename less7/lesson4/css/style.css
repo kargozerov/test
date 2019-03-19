@@ -1,0 +1,128 @@
+@import url("grid.css");
+body{
+    margin: 0;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+/*ul в качестве селектора использовать не корректно*/
+.slider {
+    padding: 0;
+    margin: 0 0 30px;
+    list-style-type: none;
+}
+
+.slider li {
+    display: none;
+}
+
+.slider li.active {
+    display: block;
+}
+
+.card {
+    border: 1px solid black;
+    height: 200px;
+    height: calc(25vw - 4*5px);/*vw - от ширины экрана*/
+    margin: 5px;
+    overflow: hidden;/*hidden - скрыть все что не влезло в контейнер*/
+    overflow: scroll;/*скрол*/
+    overflow: auto;/*скрол где нужно*/
+    /*Перенос слов*/
+    word-break: normal;/*значение по умолчанию*/
+    word-break: break-all; /*ломает слово и переносит на следуюшую строку(не по правилам русского языка)*/
+}
+
+.cards {
+    margin-bottom: 30px;
+}
+
+/*div {*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+
+/*Задаем размер шрифтам*/
+.font{
+    font-size: 16px;
+    /* 1font-size: 100%;
+    font-size: 1em; /*1ем коэфицент,от размер шрифта*/
+
+}
+
+li.hover:hover{   /*меняем размер шрифта при наведении*/
+    font-size: 150%;
+}
+
+.margin{
+    margin:  2em;
+}
+
+.height{
+    height: calc(3*1em*1.5+1*2em*1.5);/*calc арифм расчеты 1.5 - разница между фонт-сайзе и фотл-лайн*/
+}
+
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.slider img{
+    /*width: 1600px;*/
+    max-width 100%: 
+    height:auto;
+}
+
+.flex-container{ /*Флекс контейнер меню*/
+    display: flex;
+    justify-content: space-around;
+}
+/*медиа запросы*/
+/*
+@media тип_устройста условие {
+    селектор{
+        свойство: значение;
+    }
+}
+*/
+/* от самого маленького экрана до самого большого
+@media screen and (max-width: 320px){}      /*Экран не превосходит 320px Телефон
+@media screen and (max-width: 480px){} /*Планшет
+@media screen and (max-width: 768px){} /*Плашет или дестоп*
+@media screen and (min-width:481px) and (max-width: 768px {} /*от мин к макс
+*/
+@media screen and (max-width: 480px){
+    .slider{
+        display: none;
+    }
+
+    .col-xs-12{
+        width: 100% /*1карточка на странице*/
+    }
+    .card{
+        height: 95vw; /*квадратная карточка*/
+    }
+    .flex-container{
+    flex-direction: column;
+   }
+}
+
+@media screen and (min-width:481px) and (max-width: 798px){
+    .col-s-6{
+        width: 50% /*2 карточки на странице*/
+    }
+    .card{
+        height: calc(50vw-10px);
+    }
+}
+@media screen and (min-width:799px) and (max-width: 960px){
+    .col-m-4 {
+        width: 33.333% /*3 карточки на странице*/
+    }
+   .cards>div:last-child{ /*последнии дочернии дивы класса кардс*/
+    display: none;
+   }
+   }
