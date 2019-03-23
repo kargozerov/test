@@ -1,0 +1,193 @@
+.shadow{
+	height: 300px;
+	width: 300px;
+	/*Тень*/
+	/*горизонтально (+/-), вертикально (+/-), радиус размытия (+), растяжение(+) , цвет*/
+	box-shadow: 5px 10px 15px 2px green; /**/
+
+}
+img{
+	height: 300px;
+	width: 300px;
+}
+.transition{
+	background: rgba(255, 255, 0, 0.4);
+	/*background:rgb()
+	background:#3443*/
+	opacity: 0.5 ;   /*прозрачность*/
+
+
+	/*свойства переходов*/
+	transition-property: opacity;/*свойство по которому буджет перехода*/
+	transition-duration: 2s; /*Время перехода*/ 
+	transition-delay: 1s; /*Переход с задержкой*/
+	/*transition-timing-function: linear;*/
+	/*transition-timing-function: cubic-bezier();временная вункция (каким образом будет наступать переход) посмотреть для нее алгоритмы*/
+	/*transition: значения будут применятся в дял следующих свойств
+		transition-property:
+		transition-duration:
+		transition-timing-function:
+		transition-delay:;*/
+	transition: opacity 2s ease 2s;
+
+
+
+}
+.transition:hover{
+	opacity: 1;
+}
+
+.transition-2{
+	height: 200px;
+	width: 200px;
+	border-radius: 200px;
+	background: green;
+}
+
+
+.transition-2:hover{
+	/*display: block;*/ /*будет выскакивать плавно*/
+	height: 300px;
+	width: 300px;
+	transition-property: width, height; /*свойства по которым будет выполняться переход*/
+	transition-duration: 2s;
+}
+
+
+.translate{
+	height: 200px;
+	width: 200px;
+	background-color:  red;
+
+	transition: transform 2s;
+}
+
+.translate:hover{
+	transform:  translate(20px, 30px);
+	transform: translateX(20px);
+	transform: translateY(30px);
+
+}
+/*масштабирование*/
+.scale{
+	height: 200px;
+	width: 200px;
+	background: gray;
+	
+}
+
+.scale:hover{
+	/*масштабирование*/
+	/*значения от 0 до 1 уменьшают элемент*/
+		transform: scale(.5, .5); /*(x,y)*/
+		transition: transform 2s;
+}
+/*масштабирование*/
+/*Поворот*/
+.rotate{ /*Поворот*/
+	height: 200px;
+	width: 200px;
+	background: yellow;
+}
+
+.rotate:hover{
+	transform: rotate(25deg); /*угол поворота*/ /*если убрать фон можно просто поворачивать фон на угол который нужен*/
+}
+/*Поворот*/
+/*.otate:befor и aftor  посмотреть примеры можно крутые штуки делать*/
+  /*Скривление*/
+.skew{ 
+	height: 200px;
+	width: 200px;
+	background: orange;
+}
+
+.skew:hover{
+		transform: skew(10deg, 7deg);
+		transition: transform 2s;
+		transform-origin: 20px 30px;
+}
+
+/*Скривление*/
+
+/*Анимация*/
+.animation{
+	position: absolute;
+	top: 0;
+	left: 150px;
+	padding: 10px 30px;
+	background: yellow;
+	/*имя анимации*/
+	animation-name: animName; /*любое имя придумать*/
+	animation-duration: 15s; /*время анимации*/
+	animation-timing-function: ease-in-out; /*временная функиция*/
+	animation-delay: 3s; /*задержка анимации*/
+
+	/*сколько раз будет повторятся анимация*/
+	animation-iteration-count: infinite;/*2 либо конкретное значение 1,2,3 и т.д*/ /*infinite; - бесконечно*/
+	animation-direction: alternate;    /*направление повтора анимации*/ /*alternate reverse alternate-reverse*/
+
+	
+
+}
+
+/*Описание кадров анимации*/
+@keyframes animName{
+	from, to {
+		top:0;
+		left: 150px;
+	}
+
+	25%, 75%{ /*25%от всей анимации, 75% от всей анимации*/
+		top:100%;
+	}
+
+	75%{
+		background-color: black;
+	}
+	90%{
+		background-color: red;
+	}
+
+	100%{
+		top: 50%;
+	}
+}
+/*анимация для каждого кружка*/
+ul li{
+	list-style-type: none;
+	height:40px; 
+	width:40px;
+	border-radius: 20px;
+	margin-bottom: 5px;
+	background: plum;
+}
+
+.color-1{ 
+	animation: color1 2s ease 2s  infinite; /*имя / продолжительность / временная функция / задержка / сколько раз повторять / направление*/
+}
+.color-2{
+	animation: color2 2s ease 3s infinite; /*имя / продолжительность / временная функция / задержка / сколько раз повторять / направление*/
+}
+.color-3{
+	animation: color3 2s ease 4s infinite; /*имя / продолжительность / временная функция / задержка / сколько раз повторять / направление*/
+}
+
+@keyframes color1{
+	100% {
+		background: red;
+	}
+}
+
+@keyframes color2{
+	100% {
+		background: yellow;
+	}
+}
+
+@keyframes color3{
+	100% {
+		background: green;
+	}
+}
+/*анимация для каждого кружка*/
