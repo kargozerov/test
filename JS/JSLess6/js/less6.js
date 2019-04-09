@@ -1,5 +1,4 @@
-(function(){
-'use strict';
+
 
 console.log('Лекция 6 JS');
 
@@ -56,7 +55,7 @@ console.log(getelemClass2);
 
 // 5 по css селектору
 
-let ulLi = document.querySelector("ul>li");//дочерний // первый найденый элемент выведет 
+let ulLi = document.querySelector("ul>li");//дочерний // первый найденый элемент выведет (в стилях не обезательно должен быть) #elemID .class как в css бы указали
 console.log(ulLi);
 
 let queryAll1 = document.querySelectorAll("input[type = text]"); // ко всем тайп у которых тип текст
@@ -64,6 +63,85 @@ let queryAll1 = document.querySelectorAll("input[type = text]"); // ко все�
 console.log(queryAll1);
 
 
+// создание элементов и добавление в html 09-04-2019
+
+let ul = document.createElement("ul"); // создание элемента
+ console.log(ul);
+
+let li1 = document.createElement("li"); // создали ли (они не связаны с ul)
+let li2 = document.createElement("li");
+let li3 = document.createElement("li");
+
+let text1 = document.createTextNode("Elem1"); // создает текстовый узел (пока не связан с ли и ул)
+let text2 = document.createTextNode("Elem2");
+let text3 = document.createTextNode("Elem3");
+
+// работа с атрибутами
+console.log(ul.hasAttribute("id")); // проверяет наличие атрибута (вернул фолс т.к у ул нет айди)
+ul.setAttribute("id","js_ul"); // устанавливаем атрибут
+//получаем значение атрибута
+console.log(ul.getAttribute("id"));
+
+// атрибут style
+
+// это как будто пишем стили в style прямо в html
+
+ul.style.background = "blue";
+
+// по нормальному нужно делать вот так:
+// работа с классами css
+ul.classList.add("class-name"); // добавить класс
+ul.classList.remove("class-name"); // убаляет класс элемента
+ul.classList.toggle("class-name"); // проверяет и если нет класса то добавляет
+ul.classList.contains("class-name"); //проверяет ??
+
+//list.style.background = "red"; 
+
+// Добавление элементов
+//appendChild можно вызвать только к элементу к массиву нельзя его применить
+ul.appendChild(li1); // добавили в ul один элемент li1
+li1.appendChild(text1); // добваили текст в ли Elem
+ul.appendChild(li2);
+li2.appendChild(text2);
+ul.appendChild(li3);
+li3.appendChild(text3);
+
+let nav = document.getElementById("nav");
+nav.appendChild(ul);
+
+
+// innerHtml еще один метод добавить элеvtyn (вставляет строчку)
+//document.body.innerHTML = "<h2>Заголовок</h2>"; // что бы небыло написано в эелеенте innerHtml сотрет его и запишет
+//console.log(nav.innerHTML); // вывели в консоль кусок когда (просто строчка)
+
+//for (let i = 0; i<3; i++){
+//	document.body.innerHTML += "<p>TEXT</p>"; // каждый раз создание новой строки и отрисовка html заново по итогу в браузере у видим html файл и добавленый TEXT три раза
+
+
+let div = document.createElement("div");
+div.innerHTML = "<p>Создали ДИВ</p>";
+nav.insertBefore(div, ul); // добавили
+nav.removeChild(div); // удаление элементов (удалили ДИВ)
+
+//elem.replaceChild(new_elem, old_elem); // замена элементов новый на старый
+
+// Таблички
+
+//получаем таблицу из html
+
+let allTable = document.getElementsByTagName("table"); // собираем все таблички на странице
+let table = allTable[0];
+table.setAttribute("border", "1") // устанавливаем атриьбут (название, значение)
+let caption = table.createCaption(); // заголовок таблицы
+caption.innerText = "Caption"; // заголовок
+
+let row = table.insertRow(0); // сделали ряд
+
+let cell1 = row.insertCell(0); // ячейка
+let cell2 = row.insertCell(1); // ячейка
+
+cell1.innerText = "Cell 1"; // вставили текс в табличку
+cell2.innerText = "Cell 2"; // вставили текс в табличку
 
 
 
@@ -76,5 +154,18 @@ console.log(queryAll1);
 
 
 
-}());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
