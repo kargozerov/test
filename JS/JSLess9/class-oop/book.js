@@ -27,3 +27,11 @@ class Book{
 }
 
 
+//наследование
+claas ChildBook extends Book{ // это функция тоже самое что и OtherLibrary.prototype = Object.create(Library.prototype);
+	//переопределение метода
+	get title(){ // дочерний элемент
+		return "Детская книга: " + super.title; // super.title - обращаемся к методу родителя (как бутдо Book.prototype.getTitle.call(this) сахар
+	}
+
+}

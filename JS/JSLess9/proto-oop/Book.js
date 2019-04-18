@@ -9,7 +9,7 @@ function  Book() {
  //метод - сеттер
 Book.prototype.setTitle = function(title){  
 	//проверка
-    if (title.length < 2) { 
+    if (title.length < 2) { //длина строки
 			return;
 	}
 	this._title = title;
@@ -43,4 +43,44 @@ Book.prototype.getPage = function(){
 
 //console.log(alphabet);
 //console.log(tails);
+
+
+//НАСЛЕДОВАНИЕ //НАСЛЕДОВАНИЕ//НАСЛЕДОВАНИЕ//НАСЛЕДОВАНИЕ//НАСЛЕДОВАНИЕ
+
+function ChildBook () { // дочерняя функция - конструктор
+	
+}
+// наследование
+
+ChildBook.prototype = Object.create(Book.prototype); // вот на этом моменте функция ChildBook получет все методы от Book (setTitle, setPage, getTitle,  getPage )
+
+//добавление новых методов
+ChildBook.prototype.setAge = function(age){
+	this._age = age;
+};			
+
+ChildBook.prototype.getAge = function (){
+	return this._age;
+};
+
+// переопределение метода родителя
+ChildBook.prototype.getTitle = function  () {
+	// вызов метода родителя
+	return "Детская книга: " + Book.prototype.getTitle.call(this); // call говорит о вызове метода getTitle
+};
+
+let masha = new ChildBook();
+masha.setTitle("Маша и медведи");
+masha.setPage(45);
+masha.setAge("4+");
+console.log(masha.getTitle());
+console.log(masha.getAge());
+
+
+
+
+
+
+
+
 

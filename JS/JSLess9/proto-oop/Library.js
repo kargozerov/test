@@ -30,6 +30,16 @@ Library.prototype.swowAllBooks = function(){
 		}
 };
 
+function OtherLibrary (libTitle, size){
+	Library.call(this, libTitle, size); // вызываем функцию конструктор Library и передаем туда аргументы
+}
+
+OtherLibrary.prototype = Object.create(Library.prototype); // создали объект на основе Library
+
+
+
+
+
 
 
 
