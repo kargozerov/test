@@ -1,0 +1,54 @@
+use Kargozerov_Less;
+create TABLE Author(
+	`id` int primary key auto_increment not null,
+	`name` varchar(255) not null
+)Engine=InnoDB;
+
+добавить столбец
+alter table Author ADD surname TEXT;
+
+удалить столбец 
+alter table Author DROP column TEXT;
+
+изменить столбец
+alter table Author modify column surname varchar(255) not null;
+
+добавление первичного ключа
+alter table Author ADD PRIMARY KEY(имя столбца);
+
+
+
+insert into Author (`name`, `surname`) values ('Marc', 'Tven');
+insert into Author (`name`, `surname`) values ('Lev', 'Tolstoi');
+insert into Author (`name`, `surname`) values ('Anton', 'Chehov');
+insert into Author (`name`, `surname`) values ('Alexandr', 'Pushkin');
+
+
+
+Алиасы 
+select имя_столбца AS alias FROM имя_таблицы;
+select имя_столбца FROM имя_таблицы alias;
+
+select concat(name, '', surname) AS author FROM Author;
+
+select price-price*0.1 AS newSale FROM имя_таблицы;
+
+
+
+
+create table book(
+	`id` INT primary key auto_increment not null,
+	`title` varchar(255) not null,
+	`authorID` int not null
+	foreign key (`author`) references Author (`id`)
+	on delete cascade
+)Engine=InnoDB;
+
+
+
+фунции
+sum()
+avg() -среднее значение
+min()
+max()
+distinct()
