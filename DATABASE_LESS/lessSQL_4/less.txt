@@ -1,0 +1,50 @@
+связь внутри одной таблицы
+
+CREATE TABLE IF NOT EXISTS `mydb`.`comment` (
+  `idcomment` INT NOT NULL,
+  `commentText` MEDIUMTEXT NOT NULL,
+  `comment_idcomment` INT NULL,
+  PRIMARY KEY (`idcomment`),
+  INDEX `fk_comment_comment_idx` (`comment_idcomment` ASC),
+  CONSTRAINT `fk_comment_comment`
+    FOREIGN KEY (`comment_idcomment`)
+    REFERENCES `mydb`.`comment` (`idcomment`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+
+
+фунции
+sum()
+avg() -среднее значение
+min()
+max()
+count() - количесто записей
+distinct()
+
+количесто уникальных товаролв на кладе
+SELECT COUNT(*) FROM good;
+
+уникальные товары в корзине 1
+SELECT COUNT(distinct idGood) FROM cart_good WHERE idCart=1;
+
+сумма заказа по корзине 3
+select summ(cg.amount*g.price) AS res
+FROM cart_good cg, good g
+WHERE cg.idGood=g.idGood
+AND idCart =3;
+
+корзины, где сумма больше 1000
+select cg.idCart, summ(cg.amount*g.price) AS res
+FROM cart_good cg, good g
+WHERE cg.idGood=g.idGood
+group by cg.idCart
+having sum(cg.amount*g.price)>1000;
+
+
+
+триггеры (отдельный объект в БД)
+create trigger имя_триггера
