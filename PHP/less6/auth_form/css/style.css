@@ -1,0 +1,16 @@
+h1{
+	color: red;
+}
+
+.modal{
+	display: none;
+	position: fixed;
+	top: 40%;
+	left: 40%;
+	background: orangered;
+	padding: 20px;
+}
+
+.open{ /*это будем подключать js */
+	display: block;
+}
