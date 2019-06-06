@@ -22,14 +22,14 @@ $auth = $_SESSION['auth'];
  				<?php if($auth): ?>
 					<a href="logout.php">Выйти</a>
  					<?php else: ?>
-					<a href="open_modal">Войти</a>
+					<a href="#" id="open_modal">Войти</a>
  					<?php endif; ?>
  			</li>
  		</ul>
  	</nav>
 
  	<!-- модальное окно -->
- 	<div id="modal">
+ 	<div class="modal">
  		<p id='errors'></p>
  		<form name="auth_form" action="form_handler.php" method="post">
  			<p><input class="validate" type="text" name="login" placeholder="логин"></p>

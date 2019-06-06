@@ -1,4 +1,4 @@
-console.log('проверка');
+console.log('проверка js подкл');
 //обхевление переменных
 //кнопка открытия модально окна
 let open_modal_btn = document.getElementById('open_modal'); // 	<a href="open_modal">Войти</a>
@@ -33,13 +33,13 @@ function responseHandler (serverResponse){
 	if (serverResponse === AUTH_OK){
 		//значит, авторизация прошла успешно
 				window.location.replace('account.php'); //перенаправляем пользователя на account.php
-	}else if (serverResponse === AUTH_ERROR){;
+	}else if (serverResponse === AUTH_ERROR){
 	//если авторизация не удалась, выводим пользователю сообщение
-	error_filed.innerTEXT === 'Обишка авторизации';
+		error_filed.innerHTML = 'Обишка авторизации';
 	}
 }
 //отправка данных формы ajax запросом
-function send_form(event){
+function send_form(event) {
 	//отменили отправку по умолчанию
 	event.preventDefault();
 
@@ -69,11 +69,12 @@ function send_form(event){
 
 }
 //добавляем обработчик событий
-//при нажатии на кнопку (событие click) open_modal_btn  будет вызвана функция open_modal
+// при нажатии (событие click) на кнопку open_modal_btn
+// будет вызвана функция open_modal
 open_modal_btn.addEventListener('click', open_modal);
-
-//при нажатии на кнопку (событие click) на кнопку cancel_btn будет вызваная функция close_modal
-cancel_btn.addEventListener('click', close_modal);
-
-//отправка формы (событие subnit) будет вызвана будет вызвана send_form
-form.addEventListener('click', send_form);
+// при нажатии (событие click) на кнопку cansel_btn
+// будет вызвана функция close_modal
+cansel_btn.addEventListener('click', close_modal);
+// при отправке формы (событие submit)
+// будет вызвана функция send_form
+form.addEventListener('submit', send_form);
