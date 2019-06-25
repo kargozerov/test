@@ -1,0 +1,19 @@
+{
+    "name": "dolgo/front-controller",
+    "description": "22062019",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mikhail Sokolov",
+            "email": "dolgopeh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Max\\FrontController\\": "src/"
+      }
+    }
+}

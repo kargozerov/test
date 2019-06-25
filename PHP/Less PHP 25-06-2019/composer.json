@@ -1,0 +1,12 @@
+{
+    "name": "user1/html",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+    	"psr-4":{
+    		"Max\\FrontController\\": "src/"
+    	}
+    }
+}
